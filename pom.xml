@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--自己坐标-->
+    <groupId>com.hexin</groupId>
+    <artifactId>credit</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!--模块-->
+    <modules>
+        <module>credit-parent</module><!--jar包管理-->
+        <module>credit-common</module><!--通用-->
+        <module>credit-api</module><!--接口服务-->
+        <module>credit-system</module><!--系统-->
+        <module>credit-business</module><!--业务-->
+        <module>credit-job</module><!--定时调度-->
+        <module>credit-web</module><!--war-->
+    </modules>
+
+    <!--maven 编译级别调整-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
