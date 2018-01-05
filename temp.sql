@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2017-11-30 13:53:37
+Date: 2018-01-05 15:09:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -54,3 +54,25 @@ INSERT INTO `city` VALUES ('21', '78', '1', '1');
 INSERT INTO `city` VALUES ('22', '1', '7878', '1');
 INSERT INTO `city` VALUES ('23', '1', '7878979', '1');
 INSERT INTO `city` VALUES ('24', '1', '1', '1');
+
+-- ----------------------------
+-- Table structure for time_line
+-- ----------------------------
+DROP TABLE IF EXISTS `time_line`;
+CREATE TABLE `time_line` (
+  `timeline_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `create_time` datetime NOT NULL COMMENT '创建时间',
+  `content` varchar(888) DEFAULT NULL COMMENT '内容',
+  PRIMARY KEY (`timeline_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of time_line
+-- ----------------------------
+INSERT INTO `time_line` VALUES ('9', '2017-11-27 00:00:00', 'SpringBoot研究，简单追踪源码，大部分同Spring。\n核心spring.factories(auto) 以及main方法启动的方法栈');
+INSERT INTO `time_line` VALUES ('10', '2017-11-28 10:19:02', 'LayUI 官方文档简单了解，并简单引入测试 <br>');
+INSERT INTO `time_line` VALUES ('11', '2017-11-29 00:00:00', 'Springboot整合Mybatis和LayUI <br>\n用freemarker做数据绑定');
+INSERT INTO `time_line` VALUES ('12', '2017-11-30 00:00:00', '工具类 复制与迁移 doing <br><br>\n代码生成 ok <br><br>\n分页后台封装，layui+pagehelper+mybatis 测试 ok');
+INSERT INTO `time_line` VALUES ('13', '2017-12-01 00:00:00', '1.base 类引入 <br><br>\n2.layui表单测试 ok');
+INSERT INTO `time_line` VALUES ('14', '2017-12-01 00:00:32', '测通accordicion-menu组件');
+INSERT INTO `time_line` VALUES ('15', '2018-01-05 10:26:55', '周五啦 哈哈');
